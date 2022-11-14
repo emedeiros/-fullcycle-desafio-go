@@ -1,0 +1,11 @@
+version: '3'
+services:
+    go:
+      build:
+            # Folder where is the image and the dockerfile
+            context : go
+            dockerfile: Dockerfile
+      image: estevaomc/codeeducation:latest
+      container_name: codeeducation
+      volumes:
+          - ./go:/go/src/app
